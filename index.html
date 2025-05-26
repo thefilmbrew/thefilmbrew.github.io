@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Film Brew</title>
+  <link rel="icon" href="https://i.imgur.com/xrw5JIf.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #fefcf9;
+      color: #2e2e2e;
+    }
+    header {
+      background-color: #fff3e6;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px solid #f0d9c4;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #6b3e26;
+      font-size: 3em;
+      margin: 0 0 10px;
+    }
+    header img.logo {
+      height: 60px;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: #a67c52;
+      font-size: 1.2em;
+    }
+    nav {
+      background-color: #fae7d0;
+      text-align: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0d9c4;
+    }
+    nav a {
+      margin: 0 20px;
+      color: #6b3e26;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .review {
+      background: #fff;
+      border: 1px solid #f0d9c4;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    }
+    .review h2 {
+      color: #c45f00;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    .review iframe {
+      width: 100%;
+      height: 325px;
+      border: none;
+      border-radius: 10px;
+      margin: 18px 0;
+    }
+    .genre {
+      font-style: italic;
+      color: #6b3e26;
+    }
+    .emoji-rating {
+      font-size: 1.6em;
+      margin-top: 10px;
+    }
+    .tags {
+      margin-top: 10px;
+      font-size: 0.95em;
+      color: #8a5c3b;
+    }
+    .about, .contact {
+      background: #fff;
+      border: 1px solid #f0d9c4;
+      border-radius: 14px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+    }
+    .about h2, .contact h2 {
+      font-family: 'Playfair Display', serif;
+      color: #6b3e26;
+      font-size: 1.7em;
+    }
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #999;
+      font-size: 0.9em;
+      background-color: #f9f2ec;
+    }
+    .genre-filter {
+      margin-bottom: 30px;
+    }
+    select {
+      padding: 8px;
+      font-size: 1em;
+      border-radius: 8px;
+      border: 1px solid #d8c2aa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="https://i.imgur.com/xrw5JIf.png" alt="The Film Brew logo">
+    <h1>The Film Brew ☕📚🍩</h1>
+    <p>A cozy corner for film lovers</p>
+  </header>
+
+  <nav>
+    <a href="#reviews">Reviews</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="genre-filter">
+      <label for="genreSelect"><strong>Filter by Genre:</strong></label>
+      <select id="genreSelect" onchange="filterGenre()">
+        <option value="all">All</option>
+        <option value="drama">Drama</option>
+        <option value="thriller">Thriller</option>
+        <option value="romance">Romance</option>
+        <option value="comedy">Comedy</option>
+      </select>
+    </div>
+
+    <div class="review" data-genre="drama">
+      <h2>Sample Review: "The Silent Goodbye"</h2>
+      <p class="genre">🎭 Genre: Drama</p>
+      <iframe src="https://www.youtube.com/embed/yourvideoid" allowfullscreen></iframe>
+      <p><strong>Review:</strong> A heartfelt narrative with beautiful cinematography. The pacing was gentle, and the emotional arc hit just right. Perfect with a cup of coffee on a rainy day.</p>
+      <p><em>Rating: ★★★★☆</em></p>
+      <div class="emoji-rating">🍿🍿🍿🍿⭐</div>
+      <p class="tags">Tags: #emotional #cinematography #shortfilm</p>
+    </div>
+
+    <div class="about" id="about">
+      <h2>About Me</h2>
+      <p>Hi, I'm Sanchita Tomar — a film enthusiast and storyteller at heart. I love exploring short films on YouTube that stir emotion, provoke thought, or simply make you smile. Through this site, I share honest reviews of the gems I come across. Grab a coffee, sit back, and enjoy the journey!</p>
+    </div>
+
+    <div class="contact" id="contact">
+      <h2>Contact</h2>
+      <p>If you’d like to recommend a short film or share feedback, feel free to reach out via email at: <a href="mailto:sanchita@example.com">sanchita@example.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Made with ☕ and 🍩 by Sanchita Tomar — The Film Brew</p>
+  </div>
+
+  <script>
+    function filterGenre() {
+      const selected = document.getElementById("genreSelect").value;
+      const reviews = document.querySelectorAll(".review");
+      reviews.forEach((rev) => {
+        const genre = rev.getAttribute("data-genre");
+        if (selected === "all" || genre === selected) {
+          rev.style.display = "block";
+        } else {
+          rev.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
