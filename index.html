@@ -13,14 +13,14 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #e6f1f5;
+      background: linear-gradient(to bottom, #e6f1f5, #ffffff);
       color: #1e1e1e;
     }
     header {
       background-color: #d0ebf4;
       padding: 30px;
       text-align: center;
-      border-bottom: 2px solid #b6d6e0;
+      border-bottom: 2px dotted #a3cde6;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     }
     header h1 {
@@ -42,7 +42,7 @@
       background-color: #cae4ee;
       text-align: center;
       padding: 12px 0;
-      border-bottom: 1px solid #b6d6e0;
+      border-bottom: 1px dashed #b6d6e0;
     }
     nav a {
       margin: 0 20px;
@@ -59,15 +59,15 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-    .review {
+    .review, .about, .contact, .featured, .top-picks, .blog, .faq {
       background: #ffffff;
-      border: 1px solid #b6d6e0;
+      border: 2px dashed #b6d6e0;
       border-radius: 14px;
       padding: 30px;
       margin-bottom: 50px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
     }
-    .review h2 {
+    .review h2, .featured h2, .top-picks h2, .blog h2, .faq h2 {
       color: #1b4f72;
       font-family: 'Playfair Display', serif;
       font-size: 1.8em;
@@ -93,14 +93,6 @@
       font-size: 0.95em;
       color: #527a8a;
     }
-    .about, .contact {
-      background: #ffffff;
-      border: 1px solid #b6d6e0;
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 50px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-    }
     .about h2, .contact h2 {
       font-family: 'Playfair Display', serif;
       color: #1b4f72;
@@ -112,6 +104,7 @@
       color: #7d8b91;
       font-size: 0.9em;
       background-color: #dceff5;
+      border-top: 2px dotted #aacbd8;
     }
     .genre-filter {
       margin-bottom: 30px;
@@ -133,6 +126,10 @@
 
   <nav>
     <a href="#reviews">Reviews</a>
+    <a href="#featured">Featured</a>
+    <a href="#top-picks">Top Picks</a>
+    <a href="#blog">Blog</a>
+    <a href="#faq">FAQ</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -159,6 +156,31 @@
       <p class="tags">Tags: #emotional #cinematography #shortfilm</p>
     </div>
 
+    <div class="featured" id="featured">
+      <h2>🌟 Featured Short Film</h2>
+      <p>Each month we feature a gem. Stay tuned for handpicked cinematic moments that shine the brightest!</p>
+    </div>
+
+    <div class="top-picks" id="top-picks">
+      <h2>🎬 Top Picks</h2>
+      <ul>
+        <li>"Whispers in the Wind" – Romance</li>
+        <li>"The Clockmaker's Secret" – Thriller</li>
+        <li>"Moments in May" – Drama</li>
+      </ul>
+    </div>
+
+    <div class="blog" id="blog">
+      <h2>📝 Cozy Blog</h2>
+      <p>Rainy weekends, a hot cup of chai, and a good short film — nothing beats that combo. Here, I pen cozy thoughts, quotes, and weekend watchlists just for you.</p>
+    </div>
+
+    <div class="faq" id="faq">
+      <h2>❓ FAQ</h2>
+      <p><strong>How can I suggest a short film?</strong><br>Email me your recommendations!</p>
+      <p><strong>Do you accept guest reviews?</strong><br>Not yet, but maybe in the future!</p>
+    </div>
+
     <div class="about" id="about">
       <h2>About Me</h2>
       <p>Hi, I'm Sanchita Tomar — a film enthusiast and storyteller at heart. I love exploring short films on YouTube that stir emotion, provoke thought, or simply make you smile. Through this site, I share honest reviews of the gems I come across. Grab a coffee, sit back, and enjoy the journey!</p>
@@ -166,7 +188,7 @@
 
     <div class="contact" id="contact">
       <h2>Contact</h2>
-      <p>If you’d like to recommend a short film or share feedback, feel free to reach out via email at: <a href="mailto:sanchita@example.com">sanchita@example.com</a></p>
+      <p>If you’d like to recommend a short film or share feedback, feel free to reach out via email at: <a href="mailto:mtomar7274@gmail.com">mtomar7274@gmail.com</a></p>
     </div>
   </div>
 
