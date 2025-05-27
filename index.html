@@ -1,214 +1,161 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Film Brew</title>
-  <link rel="icon" href="" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
     }
     body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom, #e6f1f5, #ffffff);
-      color: #1e1e1e;
+      background-color: #fff7f4;
+      color: #2e1c1c;
     }
     header {
-      background-color: #d0ebf4;
-      padding: 30px;
-      text-align: center;
-      border-bottom: 2px dotted #a3cde6;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 10%;
+      background-color: #fff7f4;
     }
     header h1 {
       font-family: 'Playfair Display', serif;
-      color: #1b4f72;
-      font-size: 3em;
-      margin: 0 0 10px;
-    }
-    header img.logo {
-      height: 60px;
-      margin-bottom: 10px;
-      display: none;
-    }
-    header p {
-      color: #3a6d84;
-      font-size: 1.2em;
-    }
-    nav {
-      background-color: #cae4ee;
-      text-align: center;
-      padding: 12px 0;
-      border-bottom: 1px dashed #b6d6e0;
+      font-size: 24px;
     }
     nav a {
-      margin: 0 20px;
-      color: #1b4f72;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1.1em;
+      color: #2e1c1c;
+      font-weight: 500;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 60px 10%;
+      background-color: #fcebe7;
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
+    .hero-text {
+      max-width: 500px;
     }
-    .review, .about, .contact, .featured, .top-picks, .blog, .faq {
-      background: #ffffff;
-      border: 2px dashed #b6d6e0;
-      border-radius: 14px;
-      padding: 30px;
-      margin-bottom: 50px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
-    }
-    .review h2, .featured h2, .top-picks h2, .blog h2, .faq h2 {
-      color: #1b4f72;
+    .hero-text h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.8em;
-      margin-bottom: 10px;
+      font-size: 36px;
+      margin-bottom: 20px;
     }
-    .review iframe {
-      width: 100%;
-      height: 325px;
+    .hero-text p {
+      margin-bottom: 20px;
+      color: #4e3a3a;
+    }
+    .hero-text button {
+      background-color: #a24c4c;
+      color: white;
       border: none;
-      border-radius: 10px;
-      margin: 18px 0;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    .genre {
-      font-style: italic;
-      color: #3a6d84;
-    }
-    .emoji-rating {
-      font-size: 1.6em;
-      margin-top: 10px;
-    }
-    .tags {
-      margin-top: 10px;
-      font-size: 0.95em;
-      color: #527a8a;
-    }
-    .about h2, .contact h2 {
-      font-family: 'Playfair Display', serif;
-      color: #1b4f72;
-      font-size: 1.7em;
-    }
-    .footer {
+    .section {
+      padding: 60px 10%;
       text-align: center;
-      padding: 30px;
-      color: #7d8b91;
-      font-size: 0.9em;
-      background-color: #dceff5;
-      border-top: 2px dotted #aacbd8;
     }
-    .genre-filter {
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
       margin-bottom: 30px;
     }
-    select {
-      padding: 8px;
-      font-size: 1em;
-      border-radius: 8px;
-      border: 1px solid #aacbd8;
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .service {
+      width: 200px;
+      margin: 15px;
+      background-color: #fcebe7;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .expertise-bar {
+      width: 100%;
+      background-color: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    .bar {
+      height: 10px;
+      background-color: #a24c4c;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fcebe7;
     }
   </style>
 </head>
 <body>
   <header>
-    <img class="logo" src="" alt="The Film Brew logo">
-    <h1>The Film Brew ☕📚🍩</h1>
-    <p>A cozy corner for film lovers</p>
+    <h1>The Film Brew</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Reviews</a>
+      <a href="#">Genres</a>
+      <a href="#">Top Picks</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#reviews">Reviews</a>
-    <a href="#featured">Featured</a>
-    <a href="#top-picks">Top Picks</a>
-    <a href="#blog">Blog</a>
-    <a href="#faq">FAQ</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="container">
-    <div class="genre-filter">
-      <label for="genreSelect"><strong>Filter by Genre:</strong></label>
-      <select id="genreSelect" onchange="filterGenre()">
-        <option value="all">All</option>
-        <option value="drama">Drama</option>
-        <option value="thriller">Thriller</option>
-        <option value="romance">Romance</option>
-        <option value="comedy">Comedy</option>
-      </select>
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Cinema with a Sip of Perspective</h2>
+      <p>Dive into short film reviews, honest takes, and curated recommendations from every corner of YouTube.</p>
+      <button>Start Exploring</button>
     </div>
+    <img src="https://via.placeholder.com/250x300" alt="Hero Image">
+  </section>
 
-    <div class="review" data-genre="drama">
-      <h2>Sample Review: "The Silent Goodbye"</h2>
-      <p class="genre">🎭 Genre: Drama</p>
-      <iframe src="https://www.youtube.com/embed/yourvideoid" allowfullscreen></iframe>
-      <p><strong>Review:</strong> A heartfelt narrative with beautiful cinematography. The pacing was gentle, and the emotional arc hit just right. Perfect with a cup of coffee on a rainy day.</p>
-      <p><em>Rating: ★★★★☆</em></p>
-      <div class="emoji-rating">🍿🍿🍿🍿⭐</div>
-      <p class="tags">Tags: #emotional #cinematography #shortfilm</p>
+  <section class="section">
+    <h2>Categories We Cover</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Storytelling</h3>
+        <p>Reviews that explore strong narratives and visual emotions.</p>
+      </div>
+      <div class="service" style="background-color:#a24c4c; color:white;">
+        <h3>Filmmaking</h3>
+        <p>Behind the scenes of indie creators and YouTube shorts.</p>
+      </div>
+      <div class="service">
+        <h3>Performances</h3>
+        <p>Actor highlights that breathe life into the screen.</p>
+      </div>
+      <div class="service">
+        <h3>Hidden Gems</h3>
+        <p>Underrated films and channels worth discovering.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="featured" id="featured">
-      <h2>🌟 Featured Short Film</h2>
-      <p>Each month we feature a gem. Stay tuned for handpicked cinematic moments that shine the brightest!</p>
-    </div>
+  <section class="section">
+    <h2>Why Follow The Film Brew?</h2>
+    <p>Because your time deserves great cinema. We sift through the noise so you find quality content, faster.</p>
+    <p>Originality</p>
+    <div class="expertise-bar"><div class="bar" style="width: 95%;"></div></div>
+    <p>Honest Opinions</p>
+    <div class="expertise-bar"><div class="bar" style="width: 100%;"></div></div>
+    <p>Diverse Picks</p>
+    <div class="expertise-bar"><div class="bar" style="width: 90%;"></div></div>
+  </section>
 
-    <div class="top-picks" id="top-picks">
-      <h2>🎬 Top Picks</h2>
-      <ul>
-        <li>"Whispers in the Wind" – Romance</li>
-        <li>"The Clockmaker's Secret" – Thriller</li>
-        <li>"Moments in May" – Drama</li>
-      </ul>
-    </div>
-
-    <div class="blog" id="blog">
-      <h2>📝 Cozy Blog</h2>
-      <p>Rainy weekends, a hot cup of chai, and a good short film — nothing beats that combo. Here, I pen cozy thoughts, quotes, and weekend watchlists just for you.</p>
-    </div>
-
-    <div class="faq" id="faq">
-      <h2>❓ FAQ</h2>
-      <p><strong>How can I suggest a short film?</strong><br>Email me your recommendations!</p>
-      <p><strong>Do you accept guest reviews?</strong><br>Not yet, but maybe in the future!</p>
-    </div>
-
-    <div class="about" id="about">
-      <h2>About Me</h2>
-      <p>Hi, I'm Sanchita Tomar — a film enthusiast and storyteller at heart. I love exploring short films on YouTube that stir emotion, provoke thought, or simply make you smile. Through this site, I share honest reviews of the gems I come across. Grab a coffee, sit back, and enjoy the journey!</p>
-    </div>
-
-    <div class="contact" id="contact">
-      <h2>Contact</h2>
-      <p>If you’d like to recommend a short film or share feedback, feel free to reach out via email at: <a href="mailto:mtomar7274@gmail.com">mtomar7274@gmail.com</a></p>
-    </div>
-  </div>
-
-  <div class="footer">
-    <p>Made with ☕ and 🍩 by Sanchita Tomar — The Film Brew</p>
-  </div>
-
-  <script>
-    function filterGenre() {
-      const selected = document.getElementById("genreSelect").value;
-      const reviews = document.querySelectorAll(".review");
-      reviews.forEach((rev) => {
-        const genre = rev.getAttribute("data-genre");
-        if (selected === "all" || genre === selected) {
-          rev.style.display = "block";
-        } else {
-          rev.style.display = "none";
-        }
-      });
-    }
-  </script>
+  <footer>
+    <p>&copy; 2025 The Film Brew. All rights reserved.</p>
+  </footer>
 </body>
 </html>
